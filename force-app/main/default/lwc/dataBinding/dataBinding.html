@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <h1>String: {str}</h1>
+        <h1>Object Property: {obj.name}</h1>
+        <h2>Object Property: {obj.height}</h2>
+        <p>Status of bool: {bool}</p>
+        <lightning-input type="text" onchange={changeHandler}></lightning-input>
+        <template if:true={conditional}>
+            <h1>The thing is truthy!</h1>
+        </template>
+    </lightning-card>
+    <lightning-card>
+        <template for:each={players} for:item="player" for:index="index">
+            <h1 key={player.name}>{index} - {player.name}</h1>
+            <h1 key={player.name}>Age: {player.age}</h1>
+            <h1 key={player.name}>Height: {player.height}</h1>
+        </template>
+        <template iterator:player={players}>
+            <h1 key={player.value.name}>{index} - {player.value.name}</h1>
+            <h1 key={player.value.name}>Age: {player.value.age}</h1>
+            <h1 key={player.value.name}>Height: {player.value.height}</h1>
+            <template if:true={player.last}>This is the last one!</template>
+            
+        </template>
+        
+    </lightning-card>
+
+    
+</template>
