@@ -31,4 +31,12 @@ export default class DataBinding extends LightningElement {
             height:`6'1"`
         },
     ]
+
+    get addition() {
+        return 2 + 2; 
+    }
+
+    get firstPlayerName(){
+        return this.players[0].name;
+    }
 }

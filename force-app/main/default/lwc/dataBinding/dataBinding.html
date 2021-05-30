@@ -1,5 +1,5 @@
 <template>
-    <lightning-card>
+    <lightning-card title="data binding section 1">
         <h1>String: {str}</h1>
         <h1>Object Property: {obj.name}</h1>
         <h2>Object Property: {obj.height}</h2>
@@ -9,7 +9,7 @@
             <h1>The thing is truthy!</h1>
         </template>
     </lightning-card>
-    <lightning-card>
+    <lightning-card title="iteration">
         <template for:each={players} for:item="player" for:index="index">
             <h1 key={player.name}>{index} - {player.name}</h1>
             <h1 key={player.name}>Age: {player.age}</h1>
@@ -25,5 +25,15 @@
         
     </lightning-card>
 
+    <c-hello-world target="World"></c-hello-world>
+    <c-hello-world target=" Bro"></c-hello-world>
     
+    <lightning-card title="getters">
+        {firstPlayerName}
+        { addition}
+    </lightning-card>
+    <lightning-card title="setters">
+        <c-setter-child item="hello"></c-setter-child>
+    </lightning-card>
+
 </template>

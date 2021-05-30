@@ -1,0 +1,13 @@
+<template>
+    <lightning-card label="Todo List">
+        <template if:true={areTasks}> 
+            <template iterator:task={taskList}>
+                <c-todo-item key={task.taskId} task={task}></c-todo-item>
+            </template>
+        </template>
+        <template if:false={areTasks}>
+            <h1>No tasks currently, add one to begin using the todo list</h1> 
+        </template>
+
+    </lightning-card>
+</template>

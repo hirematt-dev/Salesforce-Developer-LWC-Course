@@ -1,0 +1,16 @@
+<template>
+    <lightning-card class="card" title="styling">
+        <h1 class="header">Hello</h1>
+
+        <lightning-button label="click"></lightning-button>
+        <lightning-icon class="hover" icon-name="standard:account" alternative-text="Account" title="Account"></lightning-icon>
+
+        <lightning-icon icon-name="utility:activity" alternative-text="Account" title="Account"></lightning-icon>
+        <lightning-icon icon-name="doctype:ai" alternative-text="Account" title="Account"></lightning-icon>
+        <lightning-icon icon-name="custom:custom1" alternative-text="Account" title="Account"></lightning-icon>
+    </lightning-card>
+    <lightning-card class="card" onclick={handleClick} title="onClick">
+        <c-child-component onbuttonclicked={handleChildEvent}></c-child-component>
+    </lightning-card>
+    
+</template>
