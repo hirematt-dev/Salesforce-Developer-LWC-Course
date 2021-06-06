@@ -1,0 +1,6 @@
+<template>
+    <lightning-button label="Toggle Child" onclick={toggle}></lightning-button>
+    <template if:true={shouldRender}>
+        <c-lifecycle-methods></c-lifecycle-methods>
+    </template>
+</template>

@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="lightning-record-form">
+        <lightning-record-form
+            object-api-name={objectName}
+            fields={fieldList}
+            record-id={recordId}
+            onsuccess={successHandler}
+            mode="view"
+        ></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="lightning-record-view-form">
+        <lightning-record-view-form
+        object-api-name={objectName} 
+        record-id={recordId}>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_3-of-12"><lightning-output-field field-name="Name"></lightning-output-field></div>
+            <div class="slds-col slds-size_5-of-12"><lightning-output-field field-name="Phone"></lightning-output-field></div>
+        </div>
+        <div class="slds-grid slds-gutters">
+        
+            <div class="slds-col slds-size_4-of-12"><lightning-output-field field-name="Company"></lightning-output-field></div>
+        </div>
+    </lightning-record-view-form>
+    </lightning-card>
+    <lightning-card title="lightning-record-edit-form">
+        <lightning-record-edit-form
+        object-api-name={objectName} 
+        >
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_3-of-12"><lightning-input-field field-name="Name"></lightning-input-field></div>
+            <div class="slds-col slds-size_5-of-12"><lightning-input-field field-name="Phone"></lightning-input-field></div>
+            <div class="slds-col slds-size_4-of-12"><lightning-input-field variant="label-hidden" field-name="Company"></lightning-input-field></div>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <lightning-button label="Cancel" type="button" onclick={clearFields}></lightning-button>
+            <lightning-button label="save" type="submit"></lightning-button>
+            
+        </div>
+    </lightning-record-edit-form>
+    </lightning-card>
+</template>
